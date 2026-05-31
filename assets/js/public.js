@@ -114,6 +114,61 @@
     spyTargets.forEach(t => spy.observe(t.el));
   }
 
+  /* ---------- pricing CTA → auto-fill contact budget ---------- */
+  var budgetRanges = ['$500 - $1 500', '$1 500 - $5 000', '$5 000+'];
+  function pickBudget(priceStr) {
+    var num = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
+    if (isNaN(num) || num <= 0) return '';
+    if (num <= 1500) return '$500 - $1 500';
+    if (num <= 5000) return '$1 500 - $5 000';
+    return '$5 000+';
+  }
+  $$('.price-plan-cta').forEach(function (cta) {
+    cta.addEventListener('click', function (e) {
+      e.preventDefault();
+      var planName  = cta.getAttribute('data-plan')  || '';
+      var planPrice = cta.getAttribute('data-price') || '';
+
+      /* pre-fill budget select */
+      var budgetSel = $('select[name="budget"]');
+      if (budgetSel) {
+        var target = pickBudget(planPrice);
+        if (target) budgetSel.value = target;
+      }
+
+      /* show plan badge */
+      var badge    = $('#plan-badge');
+      var badgeVal = badge && badge.querySelector('.plan-badge__text');
+      if (badge && badgeVal && planName) {
+        var label = (badge.getAttribute('data-label') || 'Plan') + ': ';
+        badgeVal.textContent = label + planName + (planPrice ? ' — ' + planPrice : '');
+        badge.hidden = false;
+      }
+
+      /* smooth scroll to contact */
+      var contact = $('#contact');
+      if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* plan badge dismiss */
+  var planBadge = $('#plan-badge');
+  if (planBadge) {
+    var closeBtn = planBadge.querySelector('.plan-badge__close');
+    if (closeBtn) closeBtn.addEventListener('click', function () { planBadge.hidden = true; });
+  }
+
+  /* ---------- language switcher: preserve current anchor ---------- */
+  $$('[data-lang-btn]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      var hash = window.location.hash;
+      if (hash) {
+        e.preventDefault();
+        window.location.href = btn.getAttribute('href') + hash;
+      }
+    });
+  });
+
   /* ---------- contact form — AJAX → real PHP backend ---------- */
   const form = $("#contact-form");
   if (form) {

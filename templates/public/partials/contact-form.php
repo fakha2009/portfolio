@@ -5,6 +5,11 @@ declare(strict_types=1);
 <form id="contact-form" class="contact-form" method="post" action="<?= cv_url('contact/submit') ?>">
     <input type="hidden" name="_token" value="<?= cv_e(cv_csrf_token('contact')) ?>">
     <input type="hidden" name="_redirect" value="<?= cv_e(cv_current_url()) ?>">
+    <div id="plan-badge" class="plan-badge" hidden
+         data-label="<?= cv_e(cv_current_locale() === 'ru' ? 'Тариф' : 'Plan') ?>">
+        <span class="plan-badge__text"></span>
+        <button class="plan-badge__close" type="button" aria-label="<?= cv_e(cv_current_locale() === 'ru' ? 'Сбросить' : 'Clear') ?>">×</button>
+    </div>
     <div class="honeypot">
         <label for="website">Website</label>
         <input id="website" type="text" name="website" tabindex="-1" autocomplete="off">

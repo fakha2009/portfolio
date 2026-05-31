@@ -330,7 +330,10 @@ $pricingPlans = array_values(array_filter(
                                     <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>
-                            <a class="btn btn--primary btn--sm" href="#contact"><?= cv_e(cv_t('actions.contact_me')) ?></a>
+                            <a class="btn btn--primary btn--sm price-plan-cta" href="#contact"
+                               data-plan="<?= cv_e((string) ($plan['name'] ?? '')) ?>"
+                               data-price="<?= cv_e((string) ($plan['price'] ?? '')) ?>"
+                            ><?= cv_e(cv_t('actions.contact_me')) ?></a>
                         </article>
                     <?php endforeach; ?>
                 </div>
