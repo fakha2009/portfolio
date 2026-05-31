@@ -1,0 +1,2 @@
+[2026-04-23 13:02:01] DB: Database connection failed {"error":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql302.infinityfree.com failed: Этот хост неизвестен"}
+[2026-04-23 13:03:49] DB: Database connection failed {"error":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql302.infinityfree.com failed: Этот хост неизвестен"}

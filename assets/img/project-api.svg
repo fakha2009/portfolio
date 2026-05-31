@@ -1,0 +1,18 @@
+<svg width="1280" height="860" viewBox="0 0 1280 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="860" rx="36" fill="#0B1220"/>
+  <rect x="54" y="54" width="1172" height="752" rx="30" fill="#121B2F" stroke="#263550" stroke-width="2"/>
+  <text x="96" y="162" fill="#93F5B2" font-size="20" font-family="Arial, sans-serif" letter-spacing="4">API PRACTICE</text>
+  <text x="96" y="252" fill="#F8FBFF" font-size="62" font-family="Arial, sans-serif" font-weight="700">REST API Practice</text>
+  <text x="96" y="312" fill="#9FB1CF" font-size="28" font-family="Arial, sans-serif">Routing, handlers, auth flow, PostgreSQL, Redis</text>
+  <rect x="96" y="372" width="440" height="320" rx="26" fill="#0D1527" stroke="#24324B"/>
+  <text x="132" y="430" fill="#7CC8FF" font-size="24" font-family="Courier New, monospace">GET /api/v1/items</text>
+  <text x="132" y="478" fill="#7CC8FF" font-size="24" font-family="Courier New, monospace">POST /api/v1/login</text>
+  <text x="132" y="526" fill="#7CC8FF" font-size="24" font-family="Courier New, monospace">PATCH /api/v1/profile</text>
+  <text x="132" y="574" fill="#7CC8FF" font-size="24" font-family="Courier New, monospace">DELETE /api/v1/item/24</text>
+  <rect x="610" y="372" width="528" height="320" rx="26" fill="#0D1527" stroke="#24324B"/>
+  <rect x="646" y="414" width="184" height="36" rx="18" fill="#93F5B2" fill-opacity="0.16"/>
+  <rect x="646" y="482" width="456" height="22" rx="11" fill="#1D2A43"/>
+  <rect x="646" y="524" width="418" height="22" rx="11" fill="#1D2A43"/>
+  <rect x="646" y="566" width="352" height="22" rx="11" fill="#1D2A43"/>
+  <circle cx="1064" cy="182" r="84" fill="#7CC8FF" fill-opacity="0.12"/>
+</svg>

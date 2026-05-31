@@ -1,0 +1,17 @@
+<svg width="1280" height="860" viewBox="0 0 1280 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="860" rx="36" fill="#0B1220"/>
+  <rect x="54" y="54" width="1172" height="752" rx="30" fill="#121B2F" stroke="#263550" stroke-width="2"/>
+  <text x="96" y="162" fill="#93F5B2" font-size="20" font-family="Arial, sans-serif" letter-spacing="4">AUTOMATION TOOLS</text>
+  <text x="96" y="252" fill="#F8FBFF" font-size="62" font-family="Arial, sans-serif" font-weight="700">Utilities and Task Automation</text>
+  <text x="96" y="312" fill="#9FB1CF" font-size="28" font-family="Arial, sans-serif">Go and Python scripts for repetitive workflows</text>
+  <rect x="96" y="382" width="1088" height="268" rx="28" fill="#0D1527" stroke="#24324B"/>
+  <rect x="140" y="430" width="294" height="168" rx="22" fill="#111E36"/>
+  <text x="172" y="486" fill="#F8FBFF" font-size="22" font-family="Arial, sans-serif" font-weight="700">Input parsing</text>
+  <text x="172" y="524" fill="#9FB1CF" font-size="18" font-family="Arial, sans-serif">CSV, JSON, HTTP requests</text>
+  <rect x="492" y="430" width="294" height="168" rx="22" fill="#111E36"/>
+  <text x="524" y="486" fill="#F8FBFF" font-size="22" font-family="Arial, sans-serif" font-weight="700">Logic layer</text>
+  <text x="524" y="524" fill="#9FB1CF" font-size="18" font-family="Arial, sans-serif">Validation, transforms, automation rules</text>
+  <rect x="844" y="430" width="294" height="168" rx="22" fill="#111E36"/>
+  <text x="876" y="486" fill="#F8FBFF" font-size="22" font-family="Arial, sans-serif" font-weight="700">Output</text>
+  <text x="876" y="524" fill="#9FB1CF" font-size="18" font-family="Arial, sans-serif">Reports, updated data, reusable scripts</text>
+</svg>

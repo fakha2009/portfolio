@@ -1,0 +1,13 @@
+.vercel
+# Local secret config
+config/config.php
+
+# Local caches and generated files
+output/
+storage/backups/
+.claude/
+
+# Local upload caches (optional, if you prefer not to track uploaded media)
+uploads/images/
+uploads/thumbs/
+uploads/videos/
