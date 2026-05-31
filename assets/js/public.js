@@ -158,14 +158,24 @@
     if (closeBtn) closeBtn.addEventListener('click', function () { planBadge.hidden = true; });
   }
 
-  /* ---------- language switcher: preserve current anchor ---------- */
+  /* ---------- language switcher: preserve current section ---------- */
   $$('[data-lang-btn]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-      var hash = window.location.hash;
-      if (hash) {
-        e.preventDefault();
-        window.location.href = btn.getAttribute('href') + hash;
-      }
+      e.preventDefault();
+
+      /* Find the last section whose top edge is at or above 55% of viewport height.
+         That is the section the user is currently reading. */
+      var sections = $$('section[id]');
+      var currentId = '';
+      var threshold = window.innerHeight * 0.55;
+      sections.forEach(function (s) {
+        if (s.getBoundingClientRect().top <= threshold) {
+          currentId = s.id;
+        }
+      });
+
+      var dest = btn.getAttribute('href') + (currentId ? '#' + currentId : '');
+      window.location.href = dest;
     });
   });
 
